@@ -15,7 +15,7 @@
         <form id="form-tabela">
             <input type="text" id="nome-contato" required placeholder="Nome completo">
             <p class="mensagem-nome">O nome precisa estar completo</p>
-            <input type="tel" id="numero-contato" required placeholder="Número de telefone" oninput="validaNumero(this)">
+            <input type="tel" id="numero-contato" required placeholder="(xx) xxxxx-xxxx" oninput="validaNumero(this)">
             <p class="mensagem-numero">O número precisa ser válido (Não pode adicionar o mesmo numero)</p>
             <button type="submit">Adicionar contato</button>
         </form>
@@ -35,5 +35,18 @@
         </table>
     </div>
     <script src="main.js"></script>
+    <script>
+        inputNumero.addEventListener('input', function (e){
+            let value = e.target.value;
+            value = value.replace(/\D/g, '');
+            if (value.length > 2) {
+                value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
+            }
+            if (value.length > 9) {
+                value = `${value.substring(0, 10)}-${value.substring(10)}`;
+            }
+            e.target.value = value;
+        });
+    </script>
 </body>
 </html>
