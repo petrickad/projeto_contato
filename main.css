@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+
+}
+header img{
+    background-color: #0056b3;
+    height: 85px;
+    border-radius: 100%;
+    margin: 0 auto;
+    
+}
+.mensagem-nome,
+.mensagem-numero{
+    border-radius: 6px;
+    color: wheat;
+    background-color: red;
+    padding: 10px 20px;
+    display: none;
+    margin-bottom: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 48px;
+}
+
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button{
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px groove #ccc;
+    padding: 5px;
+}
+thead{
+    text-align: center;
+}
+th {
+    background-color: #a79e9e;
+    font-weight: bold;
+    width: 50%;
+}
+td {
+    background-color: #f2f2f2;
+    border-radius: 0;
+}
