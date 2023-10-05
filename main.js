@@ -40,16 +40,17 @@ function adicionaLinha(){
         return;
     }
     if (numero.includes(numeroValue)) {
+        numeroValido = false;
+        document.querySelector('.mensagem-numero').style.display = 'block';
         alert(`O número de telefone ${numeroValue} já existe`);
-
+        return;
     }
-
     else{
         numeroValido = true;
         document.querySelector('.mensagem-numero').style.display = 'none';
 
         contato.push(inputContato.value);
-        numero.push(inputNumero.value);
+        numero.push(numeroValue);
 
         let linha = '<tr>';
         linha += `<td>${inputContato.value}</td>`;
@@ -57,7 +58,7 @@ function adicionaLinha(){
         linha += '</tr>';
 
         linhas += linha;
-        
+        numeroValido = true;
     }
     inputContato.value = '';
     inputNumero.value = '';
@@ -97,4 +98,16 @@ inputNumero.addEventListener('keyup', function(e){
         numeroValido = true;
         document.querySelector('.mensagem-numero').style.display = 'none';
     }
+
+    let value = e.target.value;
+
+    value = value.replace(/\D/g, '');
+
+    if (value.length > 2) {
+       value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
+    }
+    if (value.length > 9) {
+        value = `${value.substring(0, 10)}-${value.substring(10)}`;
+    }
+    e.target.value = value;
 });
