@@ -3,12 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     
+    
+}
+header h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 28px;
+    font-style: bolder;
 }
 
 header{
     display: flex;
     align-items: center;
-
 }
 header img{
     background-color: #0056b3;
@@ -27,7 +32,6 @@ header img{
     margin-bottom: 8px;
 }
 body {
-    font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
@@ -69,10 +73,12 @@ button{
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Mukta', sans-serif;
+
 }
 
 button:hover {
@@ -96,6 +102,9 @@ th {
     background-color: #a79e9e;
     font-weight: bold;
     width: 50%;
+    font-family: 'Oswald', sans-serif;
+
+    
 }
 td {
     background-color: #f2f2f2;
